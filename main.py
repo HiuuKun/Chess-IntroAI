@@ -114,13 +114,15 @@ class AIWorker:
 
     def __init__(self, game):
         self.game = game
+        self.agent = game.current_agent
+        self.board = game.board.copy()
         self.ply = len(game.move_history)
         self.result, self.error, self.done = None, None, False
         threading.Thread(target=self._run, daemon=True).start()
 
     def _run(self):
         try:
-            self.result = self.game.step()
+            self.result = self.agent.choose_move(self.board)
         except Exception as e:          # noqa: BLE001
             self.error = e
         finally:
