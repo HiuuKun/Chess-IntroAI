@@ -1,1 +1,2 @@
-pip install chess
+chess
+pygame-ce
