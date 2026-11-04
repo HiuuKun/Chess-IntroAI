@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "description": "Constructed legal KQ-versus-K diagnostics; the queen side moves first. These are completed-game tests, not reference-line puzzles.",
+  "positions": [
+    {
+      "id": "requested_d2_a2_e6",
+      "category": "general",
+      "fen": "8/8/4k3/8/8/8/K2Q4/8 w - - 0 1",
+      "description": "Requested position: agent queen d2, king a2; defender king e6."
+    },
+    {
+      "id": "open_board",
+      "category": "general",
+      "fen": "7k/8/8/8/8/8/4Q3/4K3 w - - 0 1"
+    },
+    {
+      "id": "central_defender",
+      "category": "general",
+      "fen": "8/8/8/4k3/8/8/8/KQ6 w - - 0 1"
+    },
+    {
+      "id": "mate_in_one_control",
+      "category": "control",
+      "fen": "7k/8/5KQ1/8/8/8/8/8 w - - 0 1"
+    }
+  ]
+}
