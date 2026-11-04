@@ -827,8 +827,8 @@ statistics instead of complete board copies. Runtime still includes legal-move
 generation, history-aware terminal checks, move ordering, sampled plies and
 static evaluation; simulation count alone does not measure total computation.
 
-Use the reusable puzzle and KQ benchmark commands above to evaluate agents.
-Their runners validate legal moves, input history and reported outcomes.
+Use the reusable 999-puzzle benchmark commands above to evaluate agents.
+The runner validates legal moves, input history and reported outcomes.
 
 Background references:
 

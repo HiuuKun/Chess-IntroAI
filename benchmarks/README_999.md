@@ -29,7 +29,7 @@ never edited.
 
 The default agent is `mcts_improve`, with 200 simulations and its normal
 constructor settings: rollout depth 30, exploration 1.4 and progressive
-expansion enabled. `MCTS` also uses rollout depth 30. The simulation budget is
+expansion and exchange safety enabled. `MCTS` also uses rollout depth 30. The simulation budget is
 a constructor option; the agents' own simulation defaults stay unchanged.
 Simulation budgets are passed to factories
 that accept `simulations`; other factories keep their own budget conventions.
