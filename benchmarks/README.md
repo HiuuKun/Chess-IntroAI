@@ -77,6 +77,14 @@ not a game loss. Timeouts, illegal moves and input mutation are reported
 separately. Results, settings and source hashes are saved under ignored
 `benchmark_results/`, or a new directory selected with `--output`.
 
-The supplied data was preserved byte-for-byte from the development checkout's
-`tests/1000_puzzles_in_pgn_san.json`; that old filename contained 999 records.
+## Data source
+
+The puzzles come from
+[quantum24/chess_puzzles_1k_in_pgn_san](https://huggingface.co/datasets/quantum24/chess_puzzles_1k_in_pgn_san),
+published by **quantum24** on Hugging Face. The dataset card lists **999 training
+rows** and the **CC0-1.0** license.
+
+The benchmark uses the local copy [data/puzzles_999.json](data/puzzles_999.json).
+It was preserved byte-for-byte from the supplied development file
+`tests/1000_puzzles_in_pgn_san.json`; despite that filename, it contains 999 records.
 SHA256: `c963dbec96a9622262a92d865850e04d9e1787b2295d9e726f532bcb8fed541f`.

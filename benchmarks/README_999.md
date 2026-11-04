@@ -20,6 +20,11 @@ python test_agent_999.py --validate-only
 python test_agent_999.py --agent agents.my_agent:MyAgent --simulations 200
 ```
 
+Dataset source:
+[quantum24/chess_puzzles_1k_in_pgn_san on Hugging Face](https://huggingface.co/datasets/quantum24/chess_puzzles_1k_in_pgn_san).
+Its dataset card lists 999 training rows and the CC0-1.0 license. See
+[Data source](README.md#data-source) for the local copy and its fingerprint.
+
 The current file `benchmarks/data/puzzles_999.json` contains **999** puzzles:
 333 each of mate-in-one, mate-in-two and mate-in-three. Every input position,
 PGN history, SAN/UCI solution and final checkmate is validated before testing.
