@@ -687,9 +687,6 @@ python test_agent_999.py --agent MCTS mcts_improve --simulations 200
 
 # Quick functional check; the complete input is still validated first.
 python test_agent_999.py --agent mcts_improve --simulations 50 --limit 10
-
-# Existing correctness and benchmark tests.
-python -m unittest discover -s tests -v
 ```
 
 If `import chess` fails, activate your project environment and run
@@ -738,9 +735,9 @@ Crashes, illegal moves, input mutation and timeouts have separate statuses.
 ### Exchange-safety validation
 
 Before this port, the development revision passed 75 unit and integration
-tests, including 13 focused safety tests. This branch includes the agent,
-999-puzzle and KQ tests; run the command above for its current test count. At 200 simulations, rollout depth 30 and seed 42, replaying the two
-recorded queen-blunder positions with their full game histories produced:
+tests, including 13 focused safety tests. Unit-test sources are not included
+in this branch. At 200 simulations, rollout depth 30 and seed 42, replaying
+the two recorded queen-blunder positions with their full game histories produced:
 
 | Position | Safety disabled | Safety enabled |
 | --- | --- | --- |
@@ -830,15 +827,8 @@ statistics instead of complete board copies. Runtime still includes legal-move
 generation, history-aware terminal checks, move ordering, sampled plies and
 static evaluation; simulation count alone does not measure total computation.
 
-The tests in [test_mcts_improve.py](../tests/test_mcts_improve.py) and
-[test_mcts_search_features.py](../tests/test_mcts_search_features.py) cover value
-perspective, mate puzzles, proof propagation, conservative draws, seeding,
-deadlines, board restoration and search counters. The benchmark tests cover
-scoring, process isolation and the supplied history-counter regression.
-The tests in [test_mcts_exchange_safety.py](../tests/test_mcts_exchange_safety.py)
-cover all piece types, legal pins and king captures, recaptures, promotions,
-en passant, timeout restoration, sacrifice availability and the recorded queen
-blunder near the fifty-move limit.
+Use the reusable puzzle and KQ benchmark commands above to evaluate agents.
+Their runners validate legal moves, input history and reported outcomes.
 
 Background references:
 

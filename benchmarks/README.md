@@ -27,8 +27,6 @@ python test_agent_kq.py --position-ids mate_in_one_control
 # Future agents need only the choose_move interface.
 python test_agent_999.py --agent agents.my_agent:MyAgent --simulations 200
 python test_agent_kq.py --agent agents.my_agent:MyAgent --simulations 200
-
-python -m unittest discover -s tests -v
 ```
 
 The entry points also work as `python -m benchmarks.run_999` and
@@ -111,8 +109,9 @@ new output folder. Historical experiment outputs are not copied into this branch
 
 ## Port validation
 
-The branch passes 64 unit/integration tests. All 999 puzzle records and their
-solutions validate. Public-CLI smoke checks passed six puzzle trials, four
+Before the unit-test folder was removed, the port passed 64 unit/integration
+tests. The benchmark runners and datasets remain self-contained. All 999
+puzzle records and their solutions validate. Public-CLI smoke checks passed six puzzle trials, four
 mate-in-one KQ games across both agents/colors, and two limited games containing
 real Stockfish replies. Limited games remained unresolved. The complete
 999-puzzle agent evaluation and complete general-position KQ tournament were
