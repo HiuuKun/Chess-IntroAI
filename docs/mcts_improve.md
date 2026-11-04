@@ -5,7 +5,7 @@ It adds exchange-aware move safety, progressive expansion, heuristic leaf evalua
 and exact outcome propagation. It uses `python-chess` for chess rules and does
 not call Stockfish or a neural network.
 
-This guide describes [the current implementation](mcts_improve.py). The original
+This guide describes [the current implementation](../agents/mcts_improve.py). The original
 agent remains available as `MCTS`; the improved agent is registered as
 `mcts_improve`. All pseudocode below is explanatory and uses the implementation's
 root-player value convention.
@@ -772,7 +772,9 @@ The supplied file contains 999 distinct mating positions: 333 each of mate-in-
 one, mate-in-two and mate-in-three. Use the runner above to collect current
 full-solution scores, first-move scores, error counts and search times.
 
-No fresh 999-puzzle score is claimed for this revision. Results from a different
+See the [recorded comparison](../benchmarks/README.md#recorded-results-original-versus-improved-mcts)
+for full-run results from before exchange safety. No fresh 999-puzzle score is
+claimed for this revision. Results from a different
 agent revision must not be presented as its measured performance. Existing
 historical experiment files remain unchanged.
 

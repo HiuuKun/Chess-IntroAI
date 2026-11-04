@@ -70,3 +70,6 @@ reference solution or any immediate solver checkmate is accepted. Other legal
 deviations are puzzle mismatches, not game losses. These are reference-line tests,
 not exhaustive proofs against every possible defense or game win-rate tests.
 Crashes, illegal moves, board mutation and timeouts are reported separately.
+
+See the [recorded agent comparison](README.md#recorded-results-original-versus-improved-mcts)
+and the [improved MCTS guide](../docs/mcts_improve.md).
